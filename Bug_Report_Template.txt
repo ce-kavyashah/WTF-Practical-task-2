@@ -1,0 +1,30 @@
+FACULTY OF TECHNOLOGY, CHARUSAT
+ITUS102 - WEB TECHNOLOGY FRAMEWORK
+PRACTICAL EXAMINATION – Bug Report
+Date: 13-10-2026 | Set: Task 02
+
+S1. The first navigation link had a typo in the href (#calcuator). Corrected it to #calculator so it scrolls to the calculator section.
+
+S2. The bottom site-information area used a generic <div>. Changed it to the semantic HTML5 <footer> element (kept the same class and content).
+
+S3. The page background color was not applied because the CSS property was missing a colon (background-color #f1f6f9). Added the colon: background-color: #f1f6f9;
+
+S4. The heading styling rule used class selector .pageTitle, but the HTML uses id="pageTitle". Changed the selector to #pageTitle.
+
+S5. The program was subtracting 1 from the entered late days (value - 1). Removed the incorrect subtraction so the exact number of days is used.
+
+S6. The processing-charge constant was set to 100. Corrected it to 10 as required (₹10).
+
+---
+Git commit reference (output of: git log -1 --oneline):
+e64a180 (HEAD -> main) Fix bugs and complete Library Fine Calculator (S1-S6, M1-M6, D1-D3)
+
+GitHub repository URL (if pushed):https://github.com/ce-kavyashah/WTF-Practical-task-2
+Not pushed - local commit only.
+
+---
+Verification of required test case:
+Input: 5 late days, 2 books, Student
+Expected: Rate ₹5 | Basic fine ₹50 | Processing ₹10 | Total ₹60
+Cumulative after day 5: ₹50
+(Tested and confirmed working on both desktop and mobile widths)
