@@ -1,0 +1,120 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Campus Library - Late-Return Fine Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="header-container">
+            <h1>Campus Library</h1>
+            <nav>
+                <a href="#calculator">Fine calculator</a>
+                <a href="#results">Results</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container">
+
+        <h2>Library Late-Return Fine Calculator</h2>
+
+        <!-- Calculator Form -->
+        <section class="card" id="calculator">
+            <h3>Enter information</h3>
+
+            <form id="fineForm">
+                <div class="form-group">
+                    <label for="lateDays">Late days (0–10)</label>
+                    <input
+                        type="number"
+                        id="lateDays"
+                        name="lateDays"
+                        min="0"
+                        max="10"
+                        value="7"
+                        required
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="books">Number of books (1–5)</label>
+                    <input
+                        type="number"
+                        id="books"
+                        name="books"
+                        min="1"
+                        max="5"
+                        value="4"
+                        required
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="memberType">Member type</label>
+                    <select id="memberType" name="memberType">
+                        <option value="student">Student</option>
+                        <option value="staff">Staff</option>
+                        <option value="visitor">Visitor</option>
+                    </select>
+                </div>
+
+                <button type="submit">Calculate</button>
+                <p id="errorMessage" class="error" role="alert"></p>
+            </form>
+        </section>
+
+        <!-- Calculation Policy -->
+        <section class="card policy">
+            <h3>Calculation policy</h3>
+
+            <p>
+                Fine per late day per book: Student ₹5, Staff ₹3,
+                Visitor ₹10. Processing charge: ₹10 only when the
+                fine is greater than zero.
+            </p>
+
+            <p>
+                Use the Calculate button to check the result and the
+                detailed summary.
+            </p>
+        </section>
+
+        <!-- Results -->
+        <section class="card result-card" id="results" aria-live="polite">
+            <h2>Calculated result</h2>
+
+            <p class="result-line">
+                <strong>Rate:</strong>
+                <span id="rate">₹0</span>
+                |
+                <strong>Basic fine:</strong>
+                <span id="basicFine">₹0</span>
+                |
+                <strong>Total including applicable processing charge:</strong>
+                <span id="totalFine">₹0</span>
+            </p>
+
+            <h3>Detailed summary</h3>
+            <div id="summary">
+                <p>Complete the day-wise fine summary.</p>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>Campus Library — ITUS102 | Web Technology Framework</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
